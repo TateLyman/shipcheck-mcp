@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.TateLyman/shipcheck-mcp",
+  "title": "Shipcheck MCP",
+  "description": "Run Shipcheck repo risk scans from MCP coding agents.",
+  "repository": {
+    "url": "https://github.com/TateLyman/shipcheck-mcp",
+    "source": "github",
+    "id": "1232503282"
+  },
+  "websiteUrl": "https://tatelyman.github.io/tate-web-services/shipcheck.html",
+  "version": "0.1.2",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "shipcheck-mcp",
+      "version": "0.1.2",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
