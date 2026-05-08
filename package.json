@@ -1,6 +1,6 @@
 {
   "name": "shipcheck-mcp",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "mcpName": "io.github.TateLyman/shipcheck-mcp",
   "description": "MCP server that lets AI coding agents run Shipcheck on authorized JavaScript and TypeScript repos.",
   "type": "module",

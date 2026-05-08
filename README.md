@@ -11,6 +11,10 @@ Shipcheck scans AI-built apps for launch risks such as exposed private-looking e
 
 Tool page: https://tatelyman.github.io/tate-web-services/shipcheck.html
 
+Free MCP launch self-check: https://tatelyman.github.io/tate-web-services/mcp-self-check.html
+
+Paid MCP launch check: https://tatelyman.github.io/tate-web-services/mcp-launch-review.html
+
 Official MCP Registry: https://registry.modelcontextprotocol.io/v0/servers?search=shipcheck
 
 Demo repo with GitHub code scanning alerts: https://github.com/TateLyman/shipcheck-demo-ai-app
