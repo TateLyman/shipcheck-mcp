@@ -6,7 +6,7 @@ import { runShipcheck } from "./scan.js";
 
 const server = new McpServer({
   name: "shipcheck-mcp",
-  version: "0.1.0"
+  version: "0.1.1"
 });
 
 server.registerTool(
