@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { readFileSync } from "node:fs";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -6,7 +7,7 @@ import { runShipcheck } from "./scan.js";
 
 const server = new McpServer({
   name: "shipcheck-mcp",
-  version: "0.1.1"
+  version: readPackageVersion()
 });
 
 server.registerTool(
@@ -65,6 +66,13 @@ server.registerResource(
     ]
   })
 );
+
+function readPackageVersion(): string {
+  const packageJsonUrl = new URL("../../package.json", import.meta.url);
+  const packageJson = JSON.parse(readFileSync(packageJsonUrl, "utf8")) as { version?: unknown };
+
+  return typeof packageJson.version === "string" ? packageJson.version : "unknown";
+}
 
 async function main(): Promise<void> {
   const transport = new StdioServerTransport();

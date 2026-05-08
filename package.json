@@ -1,6 +1,6 @@
 {
   "name": "shipcheck-mcp",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "mcpName": "io.github.TateLyman/shipcheck-mcp",
   "description": "MCP server that lets AI coding agents run Shipcheck on authorized JavaScript and TypeScript repos.",
   "type": "module",
@@ -43,7 +43,7 @@
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
-    "shipcheck-cli": "^0.4.1",
+    "shipcheck-cli": "^0.4.3",
     "zod": "^3.25.76"
   },
   "devDependencies": {
