@@ -1,0 +1,54 @@
+{
+  "name": "shipcheck-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that lets AI coding agents run Shipcheck on authorized JavaScript and TypeScript repos.",
+  "type": "module",
+  "homepage": "https://tatelyman.github.io/tate-web-services/shipcheck.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TateLyman/shipcheck-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TateLyman/shipcheck-mcp/issues"
+  },
+  "bin": {
+    "shipcheck-mcp": "dist/src/server.js"
+  },
+  "files": [
+    "dist/src",
+    "README.md",
+    "SECURITY.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
+    "check": "npm run lint && npm test",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "shipcheck",
+    "ai-app",
+    "vibe-coding",
+    "security",
+    "github-actions",
+    "sarif"
+  ],
+  "author": "Tate Lyman",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "shipcheck-cli": "^0.3.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

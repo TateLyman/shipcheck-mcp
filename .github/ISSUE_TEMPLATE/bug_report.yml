@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a problem with shipcheck-mcp.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting a Shipcheck MCP bug. Do not include private keys, customer data, or repo secrets.
+  - type: input
+    id: version
+    attributes:
+      label: shipcheck-mcp version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: MCP client config
+      description: Paste the relevant config with secrets removed.
+      render: json
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
