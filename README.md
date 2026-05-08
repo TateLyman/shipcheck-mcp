@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/shipcheck-mcp.svg)](https://www.npmjs.com/package/shipcheck-mcp)
 [![ci](https://github.com/TateLyman/shipcheck-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/TateLyman/shipcheck-mcp/actions/workflows/ci.yml)
+[![MCP Registry](https://img.shields.io/badge/MCP%20Registry-active-2ea44f)](https://registry.modelcontextprotocol.io/v0/servers?search=shipcheck)
 [![Shipcheck Action](https://img.shields.io/badge/Shipcheck-Action-2ea44f)](https://github.com/marketplace/actions/shipcheck-ai-app-scanner)
 
 MCP server that lets AI coding agents run [Shipcheck](https://www.npmjs.com/package/shipcheck-cli) on local JavaScript and TypeScript repositories.
@@ -9,6 +10,8 @@ MCP server that lets AI coding agents run [Shipcheck](https://www.npmjs.com/pack
 Shipcheck scans AI-built apps for launch risks such as exposed private-looking env vars, unsigned Stripe webhooks, missing Supabase/Firebase rule evidence, debug routes, missing AI usage guardrails, missing CI, loose dependencies, and thin release docs.
 
 Tool page: https://tatelyman.github.io/tate-web-services/shipcheck.html
+
+Official MCP Registry: https://registry.modelcontextprotocol.io/v0/servers?search=shipcheck
 
 Demo repo with GitHub code scanning alerts: https://github.com/TateLyman/shipcheck-demo-ai-app
 
