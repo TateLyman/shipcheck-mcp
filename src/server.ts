@@ -5,6 +5,30 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 import { runShipcheck } from "./scan.js";
 
+const severitySchema = z.enum(["info", "low", "medium", "high"]);
+const findingSchema = z.object({
+  id: z.string().describe("Stable finding identifier."),
+  title: z.string().describe("Short finding title."),
+  severity: severitySchema.describe("Finding severity."),
+  message: z.string().describe("Why the finding matters."),
+  remediation: z.string().describe("Practical fix or verification step."),
+  file: z.string().optional().describe("Relative file path tied to the finding, when available.")
+});
+
+const scanReportSchema = z.object({
+  root: z.string().describe("Scanned repository root."),
+  score: z.number().describe("Launch-readiness score from 0 to 100."),
+  ok: z.boolean().describe("Whether the scan passed the selected failOn threshold."),
+  failOn: severitySchema.describe("Severity threshold used for the pass/fail decision."),
+  totals: z.object({
+    info: z.number(),
+    low: z.number(),
+    medium: z.number(),
+    high: z.number()
+  }).describe("Finding counts by severity."),
+  findings: z.array(findingSchema).describe("Ordered launch-risk findings.")
+});
+
 const server = new McpServer({
   name: "shipcheck-mcp",
   version: readPackageVersion()
@@ -14,12 +38,24 @@ server.registerTool(
   "scan_repository",
   {
     title: "Scan repository with Shipcheck",
-    description: "Run Shipcheck on a local JavaScript or TypeScript repo the user owns or is authorized to inspect.",
+    description: [
+      "Run read-only Shipcheck static analysis on an authorized local JavaScript, TypeScript, or MCP repository.",
+      "Use before launch, directory submission, or client handoff to find exposed environment values, unsigned webhook handlers, missing database-rule evidence, debug leftovers, dependency risk, weak CI/docs, and usage-cost guardrail gaps.",
+      "The tool reads project files, does not modify the repository, does not execute project code, and does not require network access.",
+      "It returns both a formatted report and structured findings with severity, file path, and remediation."
+    ].join(" "),
     inputSchema: {
-      root: z.string().default(".").describe("Local path to the repository root."),
-      format: z.enum(["text", "markdown", "json", "sarif"]).default("text").describe("Report format to return."),
-      failOn: z.enum(["info", "low", "medium", "high"]).default("high").describe("Lowest severity that should mark the report as failing."),
-      strict: z.boolean().default(false).describe("Enable stricter release-readiness checks.")
+      root: z.string().default(".").describe("Absolute or relative path to the authorized local repository. Defaults to the current working directory."),
+      format: z.enum(["text", "markdown", "json", "sarif"]).default("text").describe("Report rendering: text for terminals, markdown for review notes, json for automation, or sarif for code-scanning upload."),
+      failOn: severitySchema.default("high").describe("Pass/fail threshold. high fails only high findings; medium fails medium and high; low fails low through high; info fails on any finding."),
+      strict: z.boolean().default(false).describe("When true, enables extra release-readiness checks for launch handoff, directory submission, and production review.")
+    },
+    outputSchema: scanReportSchema.shape,
+    annotations: {
+      readOnlyHint: true,
+      destructiveHint: false,
+      idempotentHint: true,
+      openWorldHint: false
     }
   },
   async ({ root, format, failOn, strict }) => {
