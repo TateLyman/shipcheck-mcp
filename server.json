@@ -9,12 +9,12 @@
     "id": "1232503282"
   },
   "websiteUrl": "https://tateprograms.com/shipcheck.html",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "shipcheck-mcp",
-      "version": "0.1.9",
+      "version": "0.1.11",
       "transport": {
         "type": "stdio"
       }
