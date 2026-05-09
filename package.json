@@ -1,6 +1,6 @@
 {
   "name": "shipcheck-mcp",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "mcpName": "io.github.TateLyman/shipcheck-mcp",
   "description": "MCP server for read-only Shipcheck launch-risk scans on authorized JavaScript and TypeScript repos.",
   "type": "module",
