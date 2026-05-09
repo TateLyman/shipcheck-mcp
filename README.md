@@ -7,7 +7,7 @@
 
 MCP server that lets local MCP clients run [Shipcheck](https://www.npmjs.com/package/shipcheck-cli) on authorized JavaScript and TypeScript repositories.
 
-Shipcheck scans apps and MCP servers for launch risks such as exposed private-looking env vars, unsigned Stripe webhooks, missing Supabase/Firebase rule evidence, debug routes, missing usage-cost guardrails, missing CI, loose dependencies, and thin release docs.
+Shipcheck scans apps and MCP servers for launch risks such as exposed private-looking env vars, unsigned Stripe webhooks, missing Supabase/Firebase rule evidence, debug routes, missing usage-cost guardrails, missing CI, loose dependencies, thin release docs, missing MCP smoke-test proof, and undocumented remote MCP auth boundaries.
 
 Tool page: https://tateprograms.com/shipcheck.html
 
