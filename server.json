@@ -8,13 +8,13 @@
     "source": "github",
     "id": "1232503282"
   },
-  "websiteUrl": "https://tatelyman.github.io/tate-web-services/shipcheck.html",
-  "version": "0.1.7",
+  "websiteUrl": "https://tateprograms.com/shipcheck.html",
+  "version": "0.1.8",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "shipcheck-mcp",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "transport": {
         "type": "stdio"
       }

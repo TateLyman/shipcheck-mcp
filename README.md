@@ -4,21 +4,20 @@
 [![ci](https://github.com/TateLyman/shipcheck-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/TateLyman/shipcheck-mcp/actions/workflows/ci.yml)
 [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-active-2ea44f)](https://registry.modelcontextprotocol.io/v0/servers?search=shipcheck)
 [![shipcheck-mcp MCP server](https://glama.ai/mcp/servers/TateLyman/shipcheck-mcp/badges/score.svg)](https://glama.ai/mcp/servers/TateLyman/shipcheck-mcp)
-[![Shipcheck Action](https://img.shields.io/badge/Shipcheck-Action-2ea44f)](https://github.com/marketplace/actions/shipcheck-ai-app-scanner)
 
-MCP server that lets coding agents run [Shipcheck](https://www.npmjs.com/package/shipcheck-cli) on authorized local JavaScript and TypeScript repositories.
+MCP server that lets local MCP clients run [Shipcheck](https://www.npmjs.com/package/shipcheck-cli) on authorized JavaScript and TypeScript repositories.
 
 Shipcheck scans apps and MCP servers for launch risks such as exposed private-looking env vars, unsigned Stripe webhooks, missing Supabase/Firebase rule evidence, debug routes, missing usage-cost guardrails, missing CI, loose dependencies, and thin release docs.
 
-Tool page: https://tatelyman.github.io/tate-web-services/shipcheck.html
+Tool page: https://tateprograms.com/shipcheck.html
 
-Free MCP launch self-check: https://tatelyman.github.io/tate-web-services/mcp-self-check.html
+Free MCP launch self-check: https://tateprograms.com/mcp-self-check.html
 
-Paid MCP launch check: https://tatelyman.github.io/tate-web-services/mcp-launch-review.html
+MCP directory launch checklist: https://tateprograms.com/mcp-directory-checklist.html
+
+Paid MCP launch check: https://tateprograms.com/mcp-launch-review.html
 
 Official MCP Registry: https://registry.modelcontextprotocol.io/v0/servers?search=shipcheck
-
-Demo repo with GitHub code scanning alerts: https://github.com/TateLyman/shipcheck-demo-ai-app
 
 ## Install
 

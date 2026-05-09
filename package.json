@@ -1,10 +1,10 @@
 {
   "name": "shipcheck-mcp",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "mcpName": "io.github.TateLyman/shipcheck-mcp",
   "description": "MCP server for read-only Shipcheck launch-risk scans on authorized JavaScript and TypeScript repos.",
   "type": "module",
-  "homepage": "https://tatelyman.github.io/tate-web-services/shipcheck.html",
+  "homepage": "https://tateprograms.com/shipcheck.html",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TateLyman/shipcheck-mcp.git"

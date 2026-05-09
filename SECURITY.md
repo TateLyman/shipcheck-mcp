@@ -10,4 +10,4 @@ lymantate2@gmail.com
 
 For a manual review of an app or repo you own, use:
 
-https://tatelyman.github.io/tate-web-services/shipcheck.html
+https://tateprograms.com/shipcheck.html
