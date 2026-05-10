@@ -1,6 +1,6 @@
 {
   "name": "shipcheck-mcp",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "mcpName": "io.github.TateLyman/shipcheck-mcp",
   "description": "MCP server for read-only Shipcheck launch-risk scans on authorized JavaScript and TypeScript repos.",
   "type": "module",
@@ -43,7 +43,7 @@
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
-    "shipcheck-cli": "^0.4.7",
+    "shipcheck-cli": "^0.4.9",
     "zod": "^3.25.76"
   },
   "devDependencies": {
